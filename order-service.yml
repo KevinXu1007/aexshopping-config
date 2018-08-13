@@ -45,6 +45,7 @@ spring:
     mongodb:
       host: mongo
       port: 27017
+      database: orders
   mvc:
     date-format: "YYYY-MM-dd"
   jackson:
