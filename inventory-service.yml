@@ -2,27 +2,27 @@ spring.profiles.active: development
 ---
 spring:
   profiles: cloud
-  neo4j:
-    host: ${SPRING_NEO4J_HOST:192.168.99.101}
-    port: ${SPRING_NEO4J_PORT:7474}
-    username: neo4j
-    password: 654321
+  data:
+    neo4j:
+      uri: bolt://${SPRING_NEO4J_HOST:neo4j}:7687
+      username: neo4j
+      password: 654321
 ---
 spring:
   profiles: development
-  neo4j:
-    host: ${SPRING_NEO4J_HOST:192.168.99.101}
-    port: ${SPRING_NEO4J_PORT:7474}
-    username: neo4j
-    password: 654321
+  data:
+    neo4j:
+      uri: bolt://${SPRING_NEO4J_HOST:neo4j}:7687
+      username: neo4j
+      password: 654321
 ---
 spring:
   profiles: docker
-  neo4j:
-    host: ${SPRING_NEO4J_HOST:neo4j}
-    port: ${SPRING_NEO4J_PORT:7474}
-    username: neo4j
-    password: 654321
+  data:
+    neo4j:
+      uri: bolt://${SPRING_NEO4J_HOST:neo4j}:7687
+      username: neo4j
+      password: 654321
 eureka:
   instance:
     prefer-ip-address: true
@@ -34,11 +34,11 @@ eureka:
 ---
 spring:
   profiles: test
-  neo4j:
-    host: ${SPRING_NEO4J_HOST:192.168.99.101}
-    port: ${SPRING_NEO4J_PORT:7474}
-    username: neo4j
-    password: 654321
+  data:
+    neo4j:
+      uri: bolt://${SPRING_NEO4J_HOST:neo4j}:7687
+      username: neo4j
+      password: 654321
 eureka:
   client:
     enabled: false
