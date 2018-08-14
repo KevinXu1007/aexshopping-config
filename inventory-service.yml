@@ -4,7 +4,7 @@ spring:
   profiles: cloud
   data:
     neo4j:
-      uri: http://${SPRING_NEO4J_HOST:neo4j}:7474
+      uri: bolt://${SPRING_NEO4J_HOST:neo4j}:7687
       username: neo4j
       password: 654321
 ---
@@ -12,7 +12,7 @@ spring:
   profiles: development
   data:
     neo4j:
-      uri: http://${SPRING_NEO4J_HOST:neo4j}:7474
+      uri: bolt://${SPRING_NEO4J_HOST:neo4j}:7687
       username: neo4j
       password: 654321
 ---
@@ -20,7 +20,7 @@ spring:
   profiles: docker
   data:
     neo4j:
-      uri: http://${SPRING_NEO4J_HOST:neo4j}:7474
+      uri: bolt://${SPRING_NEO4J_HOST:neo4j}:7687
       username: neo4j
       password: 654321
 eureka:
@@ -36,7 +36,7 @@ spring:
   profiles: test
   data:
     neo4j:
-      uri: http://${SPRING_NEO4J_HOST:neo4j}:7474
+      uri: bolt://${SPRING_NEO4J_HOST:neo4j}:7687
       username: neo4j
       password: 654321
 eureka:
